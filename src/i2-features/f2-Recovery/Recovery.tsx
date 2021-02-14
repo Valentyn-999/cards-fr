@@ -14,7 +14,7 @@ export const Recovery = () => {
     const error = useSelector<AppRootStateType, string>(state=>state.isLoggedIn.error)
     const dispatch  = useDispatch()
 
-    const [email, setEmail] = useState("valentyn.333k@gmail.com")
+    const [email, setEmail] = useState("")
     const from = "neko.nyakus.cafe@gmail.com"
     let message = `<div>password recovery link: <a href='https://valentyn-999.github.io/cards-fr#/create_new_password/$token$'>link</a></div>`
 

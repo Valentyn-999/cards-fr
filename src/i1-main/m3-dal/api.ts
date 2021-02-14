@@ -1,5 +1,6 @@
 import axios from "axios";
 import {AxiosResponseType, LoginType} from "../m2-bll/auth-reducer";
+import { AxiosCardPacksResponseType } from "../m2-bll/cardPacks-reducer";
 
 
 //'https://neko-back.herokuapp.com/2.0/'
@@ -8,7 +9,7 @@ import {AxiosResponseType, LoginType} from "../m2-bll/auth-reducer";
 // 'valentyn.333k@gmail.com'
 // '123123123'
 const instance  = axios.create ({
-    baseURL: 'https://neko-back.herokuapp.com/2.0/',
+    baseURL: 'http://localhost:7542/2.0/',
     withCredentials: true,
 })
 export type RequestRecoveryType = {
@@ -58,5 +59,11 @@ export const authAPI = {
     },
     ping() {
         return instance.get('ping')
+    }
+}
+
+export const cardsAPI = {
+    getCardPack(options?: string){
+        return instance.get<AxiosCardPacksResponseType>(`cards/pack`)
     }
 }

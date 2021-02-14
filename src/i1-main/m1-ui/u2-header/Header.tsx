@@ -24,6 +24,10 @@ function Header() {
                         <NavLink className={s.title_nav} activeClassName={s.active} to={PATH.RECOVERY}>Forgot
                             Password?</NavLink>
                     </div>
+                    {/* отрисовал для быстрого доступа к странице cards*/}
+                    <div className={s.nav_container}>
+                        <NavLink className={s.title_nav} activeClassName={s.active} to={PATH.CARD_PACKS}>Cards</NavLink>
+                    </div>
                 </div>
                 :
                 <div className={s.nav_links}>
